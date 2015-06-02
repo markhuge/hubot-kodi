@@ -1,0 +1,35 @@
+{
+  "name": "hubot-kodi",
+  "version": "0.0.0",
+  "description": "Talk to Kodi/XBMC with hubot",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "mocha --compilers coffee:coffee-script/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markhuge/hubot-kodi.git"
+  },
+  "keywords": [
+    "hubot",
+    "xbmc",
+    "kodi",
+    "hubot-scripts",
+    "htpc"
+  ],
+  "author": "Mark Wilkerson <mark@segfawlt.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/markhuge/hubot-kodi/issues"
+  },
+  "homepage": "https://github.com/markhuge/hubot-kodi#readme",
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "coffee-script": "^1.9.3",
+    "hubot": "^2.12.0",
+    "hubot-mock-adapter": "^1.0.0",
+    "mocha": "^2.2.5",
+    "sinon": "^1.14.1",
+    "sinon-chai": "^2.7.0"
+  }
+}

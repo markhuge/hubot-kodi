@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+- '0.12'
+- '0.10'
+after_success: tar czvf hubot-kodi-$TRAVIS_BRANCH.tar.gz package.json node_modules/
+  index.coffee scripts/ README.md LICENSE
+deploy:
+- provider: npm
+  email: mark@segfawlt.net
+  api_key:
+    secure: HNvVYYV8bBrUV16IQiGdjXsH9ncte27EYMzM0Pyynx57wNQHbP3wRLSNVPlatkxC59ClL9Lv62RINnGBKskl2iwfRDM/QpCA1hb1jzFklF3/v3SOYfK1FuttrJTRrI/qY4Iz+YHvtnmJ39tbUFiBveYrG8aiejFGpP1eiu5WoYTb/DS1x53TbXOTu+OhtOXiTDCBUslLh5+mnEkrL2DyOuG5Xb670W8smjcmrwbConPxshvemTEzxZ50elS2MDkZp03MaXyB4jaMI89+AZfL6CjWqTP2ajA/gbulaGRBPCZEOi+oQO838diICfx6MQbCw4hmTHokj0Be/AxpFnqueAM0hhxIvHupEVFG3BWr8jCALTbw2YWDV+H8o3+NrMX9/HyUsN7dwtFM76Lq0Mt/26Iq2nfv5MQbQFtVE7zbfCw+pPPLxVboesg1ZvOVX9shR4ChESa6eFWv/nksPpoW425pFcw98Gjpu2mcnfPWeTi7o/kFCqjKPNps1pAt8OodFYGaklgiNc/iUVfJyPeuesxcW3JCf9fYUlCrHEgqaNuET0tnFqUd7SQv2pIlzCjrzlx45TEZR+jVpNF6hjAr9NUPB8gxeNZGToHImPAIzzYoqnmAgCanSUzZIiXzFz8Krr6FxR2GZh7AKYnXDKprOh8ZP2+O5eVvlJ+6mX3LRhs=
+  on:
+    tags: true
+    repo: markhuge/hubot-kodi
+    all_branches: true
+- provider: releases
+  api_key:
+    secure: etyqMw3zmAGHNh7AXbNHBEoOwMYetXS8ZZN4y7ZR09H8pTBBqQYbQCjSKahjgp4IOExlTCXmtfpxeX19jMiWVoJwdA6TGfKM5SRIGonsjVb7B7KayeFt/ak422D/S3/i833NYV66VIZofFUwT/12SfaArlM7auGlJ6R7p5TMf5sqceFDiEI7jqDi4WMLbp7L/VtzLw/LI+r6iEpUEpR2y/cgMwmAwGZwQMQfGAeooWgQHO55upm8b0I6gcWdogKekO/YNRpiggncnJt3ZHxPF9ZBmzlv78LpYPScKvZ1fxSlJ3DUTbXPTRFe8F+DmJVAqKyUAZwL4q8G9J+0J1whUgnJTHEiFK9jcme4RpppIlUPMbbQivlMqDq0LZTzK/mvdmVJ13aE2A7Amdzrtb+VRRM+hEHhd0khz47+CdIdBourmxg+mLYAs7XztPyM0OkPbFputr/m5Svmym1QUpCm1zMZ/r5MpYJsNybY7O1nwW7fFMYIiX35h5AVqpshrrmoAQueqiz1aUb/PqpmzJ9XkrutCNBhl4uWxzvVo1uK9HhYL3FbfPKimo7HoZIswP9lNO7YNw/6EJD5iZ3nTdRpeIhlIO5/E/PpvEAMu/lwg5/cQ+NQIaKA9yQpGLAuAbFYYab5U87N/XC+PgYuyxFkSzt3oPme75ZkpFGlZtT4Hso=
+  file: hubot-kodi-$TRAVIS_BRANCH.tar.gz
+  skip_cleanup: true
+  on:
+    repo: markhuge/hubot-kodi
+    tags: true
+    all_branches: true
