@@ -1,4 +1,4 @@
-# hubot-kodi [![Build Status](https://travis-ci.org/git+https:/.png?branch=master)](https://travis-ci.org/git+https:/)
+# hubot-kodi [![Build Status](https://travis-ci.org/markhuge/hubot-kodi.png?branch=develop)(https://travis-ci.org/markhuge/hubot-kodi)
 
 Talk to Kodi/XBMC with hubot
 
